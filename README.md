@@ -1,5 +1,7 @@
 # Dotfiles
 
+If you'd like to set up your own dot files, check out [this article](https://medium.com/toutsbrasil/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b).
+
 ## Prerequisites
 
 This config has been tested on the following:
