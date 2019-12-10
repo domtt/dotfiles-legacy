@@ -23,11 +23,14 @@ export LANG=en_GB.UTF-8
 # fi
 
 alias e="nvim"
-alias zsh="e ~/.zshrc; source ~/.zshrc"
+alias ezsh="e ~/.zshrc; source ~/.zshrc"
 alias envim="e ~/.config/nvim/init.vim"
+alias ealacritty="e ~/.config/alacritty/alacritty.yml"
 
 alias i="sudo apt install -y"
 alias update="sudo apt update; sudo apt upgrade"
+alias k="sudo kill"
+alias pk="sudo pkill"
 
 alias c="clear"
 alias ..="cd .."
@@ -43,3 +46,6 @@ clonemy() {
 }
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias tmux="TERM=screen-256color-bce tmux -2"
+
