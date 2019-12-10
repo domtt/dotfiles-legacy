@@ -49,6 +49,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'mhartington/oceanic-next'
   Plug 'Rigellute/shades-of-purple.vim'
   Plug 'kaicataldo/material.vim'
+  Plug 'dracula/vim'
 
   " Fuzzy Search
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -81,7 +82,7 @@ endif
 
 " Theme
 syntax enable
-colorscheme material
+colorscheme dracula
 
 " Automatically update on change
 autocmd TextChanged,TextChangedI <buffer> silent update
