@@ -49,3 +49,4 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias tmux="TERM=screen-256color-bce tmux -2"
 
+export PATH=$PATH:$HOME
