@@ -15,10 +15,19 @@ This config has been tested on the following:
 curl https://tdom.dev/dotfiles.sh | bash
 ```
 
-## Extra setup
+## Post Installation
 
 The following shortcuts have to be configured by you manually:
  - `meta+t` - alacritty
+
+NeoVim also requires you to install the plugins yourself:
+
+```
+:PlugInstall
+:coc#util#install()
+```
+
+
 
 ## My configuration
 
@@ -26,4 +35,6 @@ The following shortcuts have to be configured by you manually:
 | -- | -- |
 | Terminal | Alacritty |
 | Theme | Dracula |
-| Editor | NeoVim |
+| Editors | NeoVim, VsCode |
+| Languages | Python, Node.js, Rust, Dart, Go |
+| Note Taking | TexLive, Pandoc |
