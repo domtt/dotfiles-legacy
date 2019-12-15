@@ -50,6 +50,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'Rigellute/shades-of-purple.vim'
   Plug 'kaicataldo/material.vim'
   Plug 'dracula/vim'
+  Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
 
@@ -116,6 +117,32 @@ endif
 " Theme
 syntax enable
 colorscheme dracula
+
+function! Light()
+  set bg=light
+  let g:airline_theme = "github"
+  colorscheme github
+  set list
+endfunction
+
+function! Dark()
+  set bg=dark
+  let g:airline_theme = "dracula"
+  colorscheme dracula
+  set nolist
+endfunction
+
+function! ToggleTheme()
+  if &bg ==# "light"
+    call Dark()
+  else
+    call Light()
+  endif
+endfunction
+
+nmap <leader>tl :call Light()<CR>
+nmap <leader>td :call Dark()<CR>
+nmap <leader>tt :call ToggleTheme()<CR>
 
 " FZF key bindings
 nnoremap <C-f> :FZF<CR>
