@@ -142,6 +142,15 @@ nmap <leader>rn <Plug>(coc-rename)
 " Leaving cursor over symbol causes all occurences to highlight
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Command bindings
+command! -nargs=0 Format :call CocAction('format')
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
 "  ____ _   _ ___ 
 " / ___| | | |_ _|
 "| |  _| | | || | 
@@ -149,7 +158,9 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " \____|\___/|___|
 
 " Style preferences
-set tabstop=2 shiftwidth=2 expandtab number relativenumber hidden nobackup nowritebackup cmdheight=2 updatetime=300 shortmess+=c signcolumn=yes
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent smartindent
+set number relativenumber
+set hidden nobackup nowritebackup cmdheight=2 updatetime=300 shortmess+=c signcolumn=yes
 
 " Enable theming support
 if (has("termguicolors"))

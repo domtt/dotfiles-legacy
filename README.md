@@ -29,6 +29,7 @@ NeoVim also requires you to install the plugins yourself:
 
 
 
+
 ## My configuration
 
 | Name | App |
@@ -38,3 +39,5 @@ NeoVim also requires you to install the plugins yourself:
 | Editors | NeoVim, VsCode |
 | Languages | Python, Node.js, Rust, Dart, Go |
 | Note Taking | TexLive, Pandoc |
+
+
