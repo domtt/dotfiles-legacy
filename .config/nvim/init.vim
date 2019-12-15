@@ -46,10 +46,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-surround'
 
   " Themes
-  Plug 'mhartington/oceanic-next'
-  Plug 'Rigellute/shades-of-purple.vim'
   Plug 'kaicataldo/material.vim'
-  Plug 'dracula/vim'
   Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
