@@ -36,6 +36,8 @@ call plug#begin("~/.vim/plugged")
   " Fuzzy Search
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  " Airline
+  Plug 'vim-airline/vim-airline'
 
   " for writing, to toggle, type :Goyo
   Plug 'junegunn/goyo.vim'
@@ -85,7 +87,13 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 nmap <leader>rn <Plug>(coc-rename)
 autocmd CursorHold * silent call CocActionAsync('highlight')
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Airline
+let g:airline_extensions = ['coc']
+let g:airline_skip_empty_sections = 1
+let g:airline_section_z = airline#section#create(['linenr'])
+let g:airline_powerline_fonts = 1
 
 " Latex
 let g:tex_flavor='latex'
@@ -115,20 +123,6 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-i': 'split',
   \ 'ctrl-v': 'vsplit' }
-
-" Language Client
-"let g:LanguageClient_serverCommands = {
-"  \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"  \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-"  \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-"  \ 'python': ['/usr/local/bin/pyls'],
-"\ }
-
-"nnoremap <F8> :call LanguageClient_contextMenu()<CR>
-" Or map each action separately
-"nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-"nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-"nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 " Automatically update on change
 autocmd TextChanged,TextChangedI <buffer> silent update
