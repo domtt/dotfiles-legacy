@@ -46,7 +46,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-surround'
 
   " Themes
-  Plug 'kaicataldo/material.vim'
+  Plug 'dracula/vim'
   Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
@@ -157,7 +157,7 @@ set tabstop=2 shiftwidth=2 expandtab number relativenumber hidden
 " Spell check
 set spelllang=en_gb
 " Automatically enable spell check in the given file types
-autocmd FileType latex,tex,md,markdown setlocal spell
+autocmd FileType latex,tex,md,markdown,txt setlocal spell
 " Automatically compile markdown files
 autocmd BufWritePost *.md silent execute "!pandoc % -o %:r.pdf"
 command PandocPDF silent execute "!pandoc % -o %:r.pdf"
