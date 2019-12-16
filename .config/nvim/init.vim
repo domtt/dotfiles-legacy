@@ -10,9 +10,11 @@ call plug#begin("~/.vim/plugged")
   Plug 'thosakwe/vim-flutter'
   " Latex
   Plug 'lervag/vimtex'
-  " Pandoc Markdown
+  " Markdown
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'godlygeek/tabular'
   " Git
   Plug 'tpope/vim-fugitive'
   " (J|T)SX?
@@ -25,6 +27,9 @@ call plug#begin("~/.vim/plugged")
 
   " Snippets
   Plug 'SirVer/ultisnips'
+
+  " Sessions
+  Plug 'tpope/vim-obsession'
 
   " Prettier
   " Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }

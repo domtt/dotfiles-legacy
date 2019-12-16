@@ -24,10 +24,8 @@ NeoVim also requires you to install the plugins yourself:
 
 ```
 :PlugInstall
-:coc#util#install()
+:call coc#util#install()
 ```
-
-
 
 
 ## My configuration
@@ -41,3 +39,42 @@ NeoVim also requires you to install the plugins yourself:
 | Note Taking | TexLive, Pandoc |
 
 
+### Vim
+
+| Problem         | Solution                |
+|-----------------|-------------------------|
+| Language Server | [coc.nvim]()            |
+| Snippets        | [UltiSnips]()           |
+| Fuzzy Finder    | [FZF]()                 |
+| File Viewer     | [NerdTree]()            |
+| Status Bar      | [Airline]()             |
+| Themes          | [Dracula](), [Github]() |
+
+#### Key bindings
+
+| Plugin          | Key         | Description                              |
+|-----------------|-------------|------------------------------------------|
+| General         | `;`         | leader                                   |
+|                 | `;;`, `Esc` | exit insert mode, also works in terminal |
+|                 | `<A-hjkl>`  | move between split panels                |
+| Language Server | `<C-space>` | force completion                         |
+|                 | `[g`, `[g`  | navigate diagnostics                     |
+|                 | `K`         | show documentation                       |
+|                 | `gd`        | go to definition                         |
+|                 | `gi`        | go to implementation                     |
+|                 | `gy`        | go to type definition                    |
+|                 | `gr`        | go to references                         |
+|                 | `;rn`       | rename symbol                            |
+|                 | `;ac`       | show code actions for line               |
+|                 | `;qf`       | quick fix line                           |
+|                 | `:Format`   | format document                          |
+|                 | `Fold`      | fold selection                           |
+| File Viewer     | `<C-b>`     | open file viewer                         |
+| Fuzzy Finder    | `<C-f>`     | open fuzzy finder                        |
+|                 | `<C-t>`     | open file in new tab                     |
+|                 | `<C-i>`     | open file in horizontal split            |
+|                 | `<C-v>`     | open file in vertical split              |
+| Note Taking     | `;ll`       | start compiling `.tex` file on change    |
+|                 | `<F6>`      | compile `.md` file                       |
+|                 | `<F5>`      | open `.pdf` file generated with Pandoc   |
+|                 | `:TableFormat`      | Format `.md` tables |
