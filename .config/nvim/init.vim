@@ -28,9 +28,6 @@ call plug#begin("~/.vim/plugged")
   " Snippets
   Plug 'SirVer/ultisnips'
 
-  " Sessions
-  Plug 'tpope/vim-obsession'
-
   " Prettier
   " Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
   " let g:prettier#autoformat = 1
@@ -246,7 +243,7 @@ set spelllang=en_gb
 autocmd FileType latex,tex,md,markdown,txt setlocal spell
 
 " Automatically compile markdown files
-autocmd BufWritePost *.md silent execute "!pandoc % -o %:r.pdf"
+" autocmd BufWritePost *.md silent execute "!pandoc % -o %:r.pdf"
 command PandocPDF silent execute "!pandoc % -o %:r.pdf"
 map <F6> :PandocPDF<CR>
 " For opening markdown files in zathura
