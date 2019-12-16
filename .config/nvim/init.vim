@@ -78,12 +78,9 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-" start terminal in insert mode
 
+" start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open new split panes to right and below
-set splitright
-set splitbelow
 
 " open terminal on ctrl+;
 " uses zsh instead of bash
@@ -161,6 +158,10 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent smartindent
 set number relativenumber
 set hidden nobackup nowritebackup cmdheight=2 updatetime=300 shortmess+=c signcolumn=yes
+
+" open new split panes to right and below
+set splitright
+set splitbelow
 
 " Enable theming support
 if (has("termguicolors"))
