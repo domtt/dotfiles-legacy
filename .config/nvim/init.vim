@@ -104,7 +104,10 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 "\___ \ / _ \ '__\ \ / / _ \ '__|
 " ___) |  __/ |   \ V /  __/ |   
 "|____/ \___|_|    \_/ \___|_|   
+"
 
+" install language extensions
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-java', 'coc-rls']
 " C-space forces completion
 inoremap <silent><expr> <c-space> coc#refresh()
 " Use [g and ]g to navigate diagnostics
