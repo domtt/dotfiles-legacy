@@ -220,6 +220,10 @@ let g:airline_skip_empty_sections = 1
 let g:airline_section_z = airline#section#create(['linenr'])
 let g:airline_powerline_fonts = 1
 
+" Goyo
+" enable line numbers
+let g:goyo_linenr = 1
+
 " _   _       _            
 "| \ | | ___ | |_ ___  ___ 
 "|  \| |/ _ \| __/ _ \/ __|
