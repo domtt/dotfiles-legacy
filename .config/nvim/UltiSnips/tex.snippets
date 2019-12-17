@@ -25,11 +25,6 @@ snippet dotlist "unordered list" bA
 \end{itemize}
 endsnippet
 
-snippet it "list item" bA
-\item $0
-endsnippet
-
-
 snippet ex "example" bA
 \begin{example}
 	$0
@@ -38,4 +33,21 @@ endsnippet
 
 snippet ans "answer" A
 \underline{\underline{$0}}
+endsnippet
+
+snippet fra "fraction" A
+\frac{$1}{$2}
+endsnippet
+
+snippet mult "multiline equation" bA
+\begin{align}
+	\begin{split}
+	$1 {}& = $2 \\\\
+	& = $3 \\\\
+	\end{split} 
+\end{align}
+endsnippet
+
+snippet vec "vector" A
+\begin{pmatrix}$0\end{pmatrix}
 endsnippet
